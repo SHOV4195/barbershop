@@ -6,8 +6,7 @@
    /* text colors */
    --accent-txt-cl: #FF6C00;
    --main-light-theme: #303030;
-   --main-darck-theme: #FFFFFF;
-   --white-txt-cl: #FFFFFF;
+   --main-dark-theme: #FFFFFF;
 
    /* bg-colors */
 
@@ -35,12 +34,57 @@ body {
    line-height: 1.33;
    letter-spacing: 0.09em;
    text-transform: uppercase;
+   background-color: transparent;
+   cursor: pointer;
+}
+.btn:hover,
+.btn:focus {
+   background-color: var(--accent-txt-cl);
+   color: var(--main-dark-theme);
 }
 .btn-mode-light {
    color: var(--main-light-theme);
 }
 .btn-mode-dark {
-   color: var(--main-darck-theme);
+   color: var(--main-dark-theme);
+}
+
+.socials-link {
+   font-weight: 600;
+   font-size: 11px;
+   line-height: 1.36px;
+   letter-spacing: 0.2em;
+   color: var(--main-light-theme);
+}
+.socials-link:hover,
+.socials-link:focus {
+   color: var(--accent-txt-cl);
+}
+.uppertitle {
+   font-weight: 600;
+   font-size: 11px;
+   line-height: 15px;
+   letter-spacing: 0.1em;
+   text-transform: uppercase;
+}
+.uppertitle-mode-light {
+   color: var(--main-light-theme);
+}
+.uppertitle-mode-dark {
+   ccolor: rgba(157, 164, 189, 0.6);
+}
+.section-title {
+   font-weight: 700;
+   font-size: 42px;
+   line-height: 49px;
+   letter-spacing: 0.05em;
+}
+.section-title-mode-light {
+   color: var(--main-light-theme);
+}
+
+.section-title-mode-dark {
+   color: var(--main-dark-theme);
 }
 /* common styles end */
 
@@ -53,7 +97,7 @@ body {
    font-size: 12px;
    line-height: 1.33;
    letter-spacing: 0.1em;
-   color: var(--white-txt-cl);
+   color: var(--main-dark-theme);
  }
  .header-link:hover,
  .header-link:focus {
@@ -65,5 +109,5 @@ body {
    line-height: 1.33;
    letter-spacing: 0.1em;
    text-transform: uppercase;
-   color: var(--white-txt-cl)
+   color: var(--main-dark-theme);
  }
