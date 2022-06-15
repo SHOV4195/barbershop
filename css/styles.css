@@ -19,14 +19,15 @@ body {
    line-height: 1.67;
 }
 
-
 /* common styles start */
 .link {
    text-decoration: none;
 }
+
 .list {
    list-style: none;
 }
+
 .btn {
    font-family: inherit;
    font-weight: 600;
@@ -52,7 +53,7 @@ body {
 .socials-link {
    font-weight: 600;
    font-size: 11px;
-   line-height: 1.36px;
+   line-height: 1.36;
    letter-spacing: 0.2em;
    color: var(--main-light-theme);
 }
@@ -60,23 +61,27 @@ body {
 .socials-link:focus {
    color: var(--accent-txt-cl);
 }
+
 .uppertitle {
    font-weight: 600;
    font-size: 11px;
-   line-height: 15px;
+   line-height: 1.36;
    letter-spacing: 0.1em;
    text-transform: uppercase;
 }
+
 .uppertitle-mode-light {
    color: var(--main-light-theme);
 }
+
 .uppertitle-mode-dark {
    ccolor: rgba(157, 164, 189, 0.6);
 }
+
 .section-title {
+   font-size: normal;
    font-weight: 700;
-   font-size: 42px;
-   line-height: 49px;
+   line-height: 1.16;
    letter-spacing: 0.05em;
 }
 .section-title-mode-light {
@@ -86,12 +91,14 @@ body {
 .section-title-mode-dark {
    color: var(--main-dark-theme);
 }
+
 /* common styles end */
 
- /* Header section */
- .header {
-    background-color: #191C26;
- }
+  /* Header section */
+  .header {
+     background-color: #191C26;
+  }
+
  .header-link {
    font-weight: 600;
    font-size: 12px;
@@ -99,6 +106,10 @@ body {
    letter-spacing: 0.1em;
    color: var(--main-dark-theme);
  }
+ .current-link {
+   color: var(--accent-txt-cl);
+ }
+
  .header-link:hover,
  .header-link:focus {
    color: var(--accent-txt-cl);
@@ -110,4 +121,9 @@ body {
    letter-spacing: 0.1em;
    text-transform: uppercase;
    color: var(--main-dark-theme);
+ }
+
+ /* Hero section */
+ .hero {
+   background-color: #191C26;
  }
