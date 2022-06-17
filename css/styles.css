@@ -11,6 +11,8 @@
    /* bg-colors */
 
    /* others */
+   --items: 3;
+   --indent: 30;
 }
 
 body {
@@ -19,16 +21,45 @@ body {
    line-height: 1.67;
 }
 
+/* reset */
+h1,
+h2,
+h3,
+h4,
+p {
+   margin: 0;
+}
+
+img {
+   display: block;
+   max-width: 100%;
+   height: auto;
+}
+
 /* common styles start */
+.section {
+   padding-top: 130px;
+   padding-bottom: 130px;
+}
+.conteiner {
+   padding-left: 15px;
+   padding-right: 15px;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+
 .link {
    text-decoration: none;
 }
 
 .list {
    list-style: none;
+   margin: 0;
 }
 
 .btn {
+   padding: 12px 20px;
    font-family: inherit;
    font-weight: 600;
    font-size: 12px;
@@ -37,7 +68,9 @@ body {
    text-transform: uppercase;
    background-color: transparent;
    cursor: pointer;
+   border-radius: 25px;
 }
+
 .btn:hover,
 .btn:focus {
    background-color: var(--accent-txt-cl);
@@ -68,17 +101,21 @@ body {
    line-height: 1.36;
    letter-spacing: 0.1em;
    text-transform: uppercase;
+   margin-bottom: 20px;
 }
 
 .uppertitle-mode-light {
    color: var(--main-light-theme);
+   margin-bottom: 20px;
 }
 
 .uppertitle-mode-dark {
    ccolor: rgba(157, 164, 189, 0.6);
+   margin-bottom: 44px;
 }
 
 .section-title {
+   margin-bottom: 20px;
    font-size: normal;
    font-weight: 700;
    line-height: 1.16;
@@ -94,12 +131,31 @@ body {
 
 /* common styles end */
 
-  /* Header section */
-  .header {
-     background-color: #191C26;
-  }
+/* Header section */
+.header {
+   background-color: #191C26;
+}
+.header-conteiner {
+   display: flex;
+   align-items: center;
+}
+
+.header-list {
+   display: flex;
+}
+.header-item {
+   margin-right: 40px;
+}
+.header-group {
+   margin: auto;
+
+}
+.header-btn {
+   margin-left: 40px;
+}
 
  .header-link {
+   display: block;
    font-weight: 600;
    font-size: 12px;
    line-height: 1.33;
@@ -127,3 +183,51 @@ body {
  .hero {
    background-color: #191C26;
  }
+
+/* About */
+ .about-container {
+   display: flex;
+ } 
+
+ .about-list {
+   display: flex;
+ }
+
+ .about-group {
+   flex-basis: 500px;
+   margin-left: 64px;
+ }
+
+ .about-item:not(:last-child) {
+   margin-right: 30px;
+ }
+.about-descr {
+   margin-bottom: 20px;
+}
+/* Price */
+.price-list {
+   display: flex;
+   margin-bottom: 50px;
+
+   font-size: 18px;
+
+
+}
+.price-inner-list {
+   padding: 30px 40px;
+}
+.price-list-item {
+   flex-basis: 50%;
+   outline: 1px solid cornflowerblue;
+}
+/* Team */
+.team-list {
+   display: flex;
+   flex-wrap: wrap;
+   margin: -15px;
+
+}
+.team-item {
+   flex-basis: calc((100% - var(--indent) * var(--items)) / var(--items) );
+   margin: 15px;
+}
