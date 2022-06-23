@@ -122,7 +122,7 @@ img {
    font-size: 72px;
    line-height: 1.18;
    letter-spacing: 0.05em;
-   color: #ffffff;
+   color: var(--main-dark-theme);
 }
 
 .section-title {
@@ -153,7 +153,7 @@ img {
 }
 
 .section-subtitle-mode-dark {
-   color: #ffffff;
+   color: var(--main-dark-theme);
 }
 
  /* 
@@ -186,11 +186,11 @@ img {
    font-size: 11px;
    line-height: 1.36;
    letter-spacing: 0.1em;
-   color: #ffffff;
+   color: var(--main-dark-theme);
 
    background-color: transparent;
    border: none;
-   border-bottom: 1px solid #ffffff;
+   border-bottom: 1px solid var(--main-dark-theme);
    cursor: pointer;
 }
 
@@ -406,7 +406,7 @@ img {
 }
 
 .contatcs-uppertitle {
-   color: #ffffff;
+   color: var(--main-dark-theme);
 }
 
 .contacts-address {
