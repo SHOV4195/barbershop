@@ -312,7 +312,14 @@ img {
 
 /* Price */
 .price {
+   max-width: 1440px;
+   margin-left: auto;
+   margin-right: auto;
    background-color: #111319;
+   background-image: url(../images/price/price-bg.png);
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
 }
 
 .price-list {
@@ -325,13 +332,32 @@ img {
    color: #9da4bd;
 }
 
+.price-list-item:first-child {
+   background-image: linear-gradient(180deg, #171A24 0%, rgba(23, 26, 36, 0.2) 100%);
+}
+
+.price-list-item:last-child {
+   background-image:linear-gradient(180deg, #090B13 0%, rgba(9, 11, 19, 0.2) 100%);
+}
+
 .price-list-item {
    flex-basis: 50%;
-   outline: 1px solid cornflowerblue;
+   /* outline: 1px solid cornflowerblue; */
 }
 
 .price-inner-item:not(:last-child) {
    margin-bottom: 20px;
+}
+
+.price-inner-item::before {
+   content: "";
+   display: inline-block;
+   /* width: 100%; */
+   flex-grow: 1;
+   height: 1px;
+   background-color: rgba(157, 164, 189, 0.12);
+
+
 }
 
 .price-inner-list {
@@ -340,7 +366,12 @@ img {
 
 .price-inner-item {
    display: flex;
-   justify-content: space-between;
+   align-items: baseline;
+   gap: 6px;
+}
+
+.price-inner-desc {
+   order: -1;
 }
 
 .price-btn {
@@ -383,7 +414,7 @@ img {
 }
 
 .team-item {
-   outline: 1px solid blueviolet;
+   /* outline: 1px solid blueviolet; */
 }
 
 .team-wrapper {
@@ -391,6 +422,7 @@ img {
 }
 
 .team-subtitle {
+   margin-bottom: 8px;
    font-size: 18px;
    line-height: 1.38;
    text-align: center;
@@ -399,11 +431,49 @@ img {
 }
 
 .team-position {
+   margin-bottom: 30px;
    font-size: 14px;
    line-height: 1.36;
    text-align: center;
    letter-spacing: 0.02em;
    color: #ff6c00;
+}
+
+/* Оформлення иконок */
+
+.social-media {
+   display: flex;
+   justify-content: center;
+}
+.social-media-item:not(:last-child) {
+   margin-right: 10px;
+}
+
+.social-media-link {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   color: #303030;
+   background-color: #FFFFFF;
+   border-radius: 50%;
+   width: 44px;
+   height: 44px;
+}
+
+/* Встановлюємо fill на іконку при ховері на посилання */
+/* .social-media-link:hover .social-media-icon,
+.social-media-link:focus .social-media-icon{
+   fill: var(--accent-txt-cl);
+} */
+
+
+.social-media-link:hover,
+.social-media-link:focus {
+   color: var(--accent-txt-cl);
+}
+
+.social-media-icon {
+   fill: currentColor;
 }
 
 
@@ -415,6 +485,10 @@ img {
 /* Contacts section */
 .contacts {
    background-color: #191c26;
+   background-image: url(../images/contacts/contacts-bg.png);
+   background-repeat: no-repeat;
+   background-size: contain;
+   background-position: top 50% left calc(50% + 312px);
 }
 
 .contatcs-uppertitle {
