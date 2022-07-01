@@ -13,6 +13,8 @@
    /* others */
    --items: 3;
    --indent: 30px;
+
+   --anim-slow: 600ms ease-in-out;
 }
 
 body {
@@ -73,6 +75,9 @@ img {
    border: 1px solid var(--accent-txt-cl);
    cursor: pointer;
    border-radius: 25px;
+
+   transition: background-color var(--anim-slow),
+   color var(--anim-slow);
 }
 
 .btn:hover,
@@ -93,6 +98,13 @@ img {
    line-height: 1.36;
    letter-spacing: 0.2em;
    color: var(--main-light-theme);
+
+   /* transition-property: color;
+   transition-duration: 600ms;
+   transition-timing-function: ease-in-out; */
+
+   transition: color var(--anim-slow);
+
 }
 .socials-link:hover,
 .socials-link:focus {
@@ -247,6 +259,8 @@ img {
     line-height: 1.33;
     letter-spacing: 0.1em;
     color: var(--main-dark-theme);
+
+    transition: color var(--anim-slow);
  }
 
  .current-link {
@@ -458,6 +472,8 @@ img {
    border-radius: 50%;
    width: 44px;
    height: 44px;
+
+   transition: color var(--anim-slow);
 }
 
 /* Встановлюємо fill на іконку при ховері на посилання */
