@@ -15,6 +15,7 @@
    --indent: 30px;
 
    --anim-slow: 600ms ease-in-out;
+   --anim-fast: 300ms ease-in-out;
 }
 
 body {
@@ -97,13 +98,17 @@ img {
    font-size: 11px;
    line-height: 1.36;
    letter-spacing: 0.2em;
+
    color: var(--main-light-theme);
 
    /* transition-property: color;
    transition-duration: 600ms;
    transition-timing-function: ease-in-out; */
 
-   transition: color var(--anim-slow);
+   transition: color var(--anim-slow),
+   background-color var(--anim-slow),
+   box-shadow var(--anim-slow),
+   transform var(--anim-slow);
 
 }
 .socials-link:hover,
@@ -200,15 +205,16 @@ img {
 /* slider start */
 .slider {
    position: absolute;
-   color: #fff;
    top: 0;
    left: 0;
 
-
+   color: #fff;
 }
 
-.slider-control {
-
+.slider-controls {
+   position: absolute;
+   top: 0;
+   left: 0;
 }
 
 
@@ -242,13 +248,17 @@ img {
 
 
 /* Header */
-.hero {
-   
-}
+
 
 .page-header {
+   position: fixed;
+   top: 0;
+   width: 100%;
    background-color: #191C26;
 }
+
+
+
 .header-container {
    display: flex;
    align-items: center;
@@ -279,7 +289,10 @@ img {
  }
 
  .current-link {
+   position: relative;
     color: var(--accent-txt-cl);
+    display: flex;
+    align-items: center;
  }
 
  .header-link:hover,
@@ -298,7 +311,11 @@ img {
    width: 100%;
    height: 4px;
    display: inline-block;
-   margin-right: 10ps;
+   margin-right: 10px;
+
+   background-color: var(--accent-txt-cl);
+   border-radius: 2px;
+
  }
 
 
@@ -323,15 +340,37 @@ img {
 
  /* Hero */
  .hero {
+   max-width: 1280px;
+   margin: 0 auto;
    background-color: #191C26;
+   background-image: url(../images/hero/hero-bg.jpg),
+   linear-gradient(to right, #fff 100px, rgba(25, 28, 38, 0.2) 155px);
  }
 
- .hero-descr {
-    font-size: 18px;
-    line-height: 1.67;
-    letter-spacing: 0.02em;
-    color: #9da4bd;
+ .hero-container {
+   display: flex;
  }
+
+
+
+.hero-left-site {
+   flex-basis: 100px;
+
+}
+
+.hero-right-side {
+   flex-grow: 1;
+   padding-top: 272px;
+   padding-bottom: 206px;
+
+}
+
+.hero-descr {
+   font-size: 18px;
+   line-height: 1.67;
+   letter-spacing: 0.02em;
+   color: #9da4bd;
+}
  /* Hero */
 /* About */
  .about-container {
@@ -499,13 +538,16 @@ img {
    display: flex;
    align-items: center;
    justify-content: center;
-   color: #303030;
-   background-color: #FFFFFF;
-   border-radius: 50%;
+
    width: 44px;
    height: 44px;
 
-   transition: color var(--anim-slow);
+   color: #303030;
+   background-color: #FFFFFF;
+   border-radius: 50%;
+
+   transition: color var(--anim-fast),
+   background-color var(--anim-fast);
 }
 
 /* Встановлюємо fill на іконку при ховері на посилання */
