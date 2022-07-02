@@ -29,7 +29,7 @@
     <!-- custom styles end -->
   </head>
 
-  <body>
+  <body data-body>
     <!-- Header -->
     <header class="page-header">
       <div class="container header-container">
@@ -60,7 +60,9 @@
         </nav>
         <div class="header-group">
           <a class="header-contact link" href="tel:+380441111111">+38 044 111 11 11</a>
-          <button class="header-btn btn btn-mode-dark" type="button">онлайн-запись</button>
+          <button class="header-btn btn btn-mode-dark" type="button" data-modal-open>
+            онлайн-запись
+          </button>
         </div>
       </div>
     </header>
@@ -72,10 +74,10 @@
           <div class="hero-left-site">
             <ul class="hero-list list">
               <li class="hero-item">
-                <a class="hero-link link socials-link" href="">Youtube</a>
+                <a class="hero-link link socials-link" href="">Instagram</a>
               </li>
               <li class="hero-item">
-                <a class="hero-link link socials-link" href="">Instagram</a>
+                <a class="hero-link link socials-link" href="">Youtube</a>
               </li>
             </ul>
           </div>
@@ -88,10 +90,10 @@
             </p>
           </div>
 
-          <ul class="slider list">
-            <li>Слайд 1</li>
-            <li>Слайд 2</li>
-            <li>Слайд 3</li>
+          <ul class="slider-pagination list">
+            <li class="slider-pagination-item current"></li>
+            <li class="slider-pagination-item"></li>
+            <li class="slider-pagination-item"></li>
           </ul>
           <ul class="slider-controls list">
             <li>
@@ -435,7 +437,7 @@
             На латинском языке “барба” означает “борода”
           </p>
           <h2 hidden>Примеры работ</h2>
-          <ul class="portfolio-item list card-set-item">
+          <ul class="portfolio-list list card-set">
             <li class="portfolio-item card-set-item">
               <img
                 class="portfolio-pic"
@@ -444,6 +446,11 @@
                 width="270"
                 height="360"
               />
+              <div class="portfolio-overlay">
+                <p class="portfolio-descr">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, quos?
+                </p>
+              </div>
             </li>
             <li class="portfolio-item card-set-item">
               <img
@@ -453,6 +460,11 @@
                 width="270"
                 height="360"
               />
+              <div class="portfolio-overlay">
+                <p class="portfolio-descr">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, quos?
+                </p>
+              </div>
             </li>
             <li class="portfolio-item card-set-item">
               <img
@@ -462,6 +474,11 @@
                 width="270"
                 height="360"
               />
+              <div class="portfolio-overlay">
+                <p class="portfolio-descr">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, quos?
+                </p>
+              </div>
             </li>
             <li class="portfolio-item card-set-item">
               <img
@@ -471,6 +488,11 @@
                 width="270"
                 height="360"
               />
+              <div class="portfolio-overlay">
+                <p class="portfolio-descr">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, quos?
+                </p>
+              </div>
             </li>
           </ul>
         </div>
@@ -534,5 +556,16 @@
         </ul>
       </div>
     </footer>
+    <!-- Modal window -->
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="modal-close-btn" type="button" data-modal-close>
+          <svg width="20" height="20">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
