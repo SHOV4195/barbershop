@@ -13,6 +13,7 @@
       rel="stylesheet"
     />
     <!-- Fonts end -->
+
     <!-- Normalize styles start -->
     <link
       rel="stylesheet"
@@ -22,7 +23,12 @@
       referrerpolicy="no-referrer"
     />
     <!-- Normalize styles end -->
-    <!-- Animate.css -->
+    <!-- Animate.css start -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <!-- Animate.css end -->
 
     <!-- custom styles start -->
     <link rel="stylesheet" href="./css/styles.css" />
@@ -31,7 +37,7 @@
 
   <body data-body>
     <!-- Header -->
-    <header class="page-header">
+    <header class="page-header" data-header>
       <div class="container header-container">
         <a class="header-logo" href="./index.html">
           <img
@@ -60,7 +66,11 @@
         </nav>
         <div class="header-group">
           <a class="header-contact link" href="tel:+380441111111">+38 044 111 11 11</a>
-          <button class="header-btn btn btn-mode-dark" type="button" data-modal-open>
+          <button
+            class="header-btn btn btn-mode-dark animate__animated animate__bounce"
+            type="button"
+            data-modal-open
+          >
             онлайн-запись
           </button>
         </div>
