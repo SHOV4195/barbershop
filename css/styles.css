@@ -20,7 +20,7 @@
 
 body {
    font-family: var(--main-font), sans-serif;
-   font-size: 18px;
+   font-size: 14px;
    line-height: 1.86;
 }
 
@@ -76,10 +76,11 @@ img {
    line-height: 1.33;
    letter-spacing: 0.09em;
    text-transform: uppercase;
+
    background-color: transparent;
    border: 1px solid var(--accent-txt-cl);
-   cursor: pointer;
    border-radius: 25px;
+   cursor: pointer;
 
    transition: background-color var(--anim-slow),
    color var(--anim-slow);
@@ -109,12 +110,12 @@ img {
    transition-duration: 600ms;
    transition-timing-function: ease-in-out; */
 
-   transition: color var(--anim-slow),
-   background-color var(--anim-slow),
+   transition: color var(--anim-slow);
+   /* background-color var(--anim-slow),
    box-shadow var(--anim-slow),
-   transform var(--anim-slow);
-
+   transform var(--anim-slow); */
 }
+
 .socials-link:hover,
 .socials-link:focus {
    color: var(--accent-txt-cl);
@@ -123,8 +124,8 @@ img {
 .uppertitle {
    margin-bottom: 20px;
    display: flex;
-   
    align-items: center;
+
    font-weight: 600;
    font-size: 11px;
    line-height: 1.36;
@@ -176,8 +177,10 @@ img {
    color: var(--main-dark-theme);
    margin-bottom: 44px;
 }
+
 .section-subtitle {
    margin-bottom: 20px;
+
    font-size: 18px;
    line-height: 1.67;
    letter-spacing: 0.02em;
@@ -283,9 +286,17 @@ img {
    top: 0;
    z-index: 100;
    width: 100%;
+
+   transition: background-color var(--anim-slow), 
+   backdrop-filter var(--anim-slow),
+   box-shadow var(--anim-slow);
 }
 
-
+.page-header.js-no-transparency {
+   background-color: rgba(16, 18, 27, 0.4);
+   backdrop-filter: blur(10px);
+   box-shadow: 0 4px 10px rgba(25, 28, 38, 0.4);
+}
 
 .header-container {
    display: flex;
@@ -318,14 +329,9 @@ img {
 
  .current-link {
    position: relative;
-    color: var(--accent-txt-cl);
-    display: flex;
-    align-items: center;
- }
-
- .header-link:hover,
- .header-link:focus {
-    color: var(--accent-txt-cl);
+   color: var(--accent-txt-cl);
+   display: flex;
+   align-items: center;
  }
 
  .current-link::before {
@@ -343,23 +349,26 @@ img {
 
    background-color: var(--accent-txt-cl);
    border-radius: 2px;
-
  }
 
 
-
+ .header-link:hover,
+ .header-link:focus {
+    color: var(--accent-txt-cl);
+ }
 
  .header-group {
     margin: auto;
  }
 
  .header-contact {
-    font-weight: 600;
-    font-size: 12px;
-    line-height: 1.33;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--main-dark-theme);
+   font-weight: 600;
+   font-size: 12px;
+   line-height: 1.33;
+   letter-spacing: 0.1em;
+   text-transform: uppercase;
+
+   color: var(--main-dark-theme);
  }
 
 .header-btn {
@@ -445,7 +454,6 @@ img {
    margin-left: 64px;
  }
 
-
 .about-descr {
    margin-bottom: 40px;
 }
@@ -455,6 +463,7 @@ img {
    max-width: 1440px;
    margin-left: auto;
    margin-right: auto;
+
    background-color: #111319;
    background-image: url(../images/price/price-bg.png);
    background-repeat: no-repeat;
@@ -470,19 +479,29 @@ img {
    line-height: 1.67;
    letter-spacing: 0.02em;
    color: #9da4bd;
-}
 
-.price-list-item:first-child {
-   background-image: linear-gradient(180deg, #171A24 0%, rgba(23, 26, 36, 0.2) 100%);
-}
-
-.price-list-item:last-child {
-   background-image:linear-gradient(180deg, #090B13 0%, rgba(9, 11, 19, 0.2) 100%);
+   perspective: 1000px;
 }
 
 .price-list-item {
    flex-basis: 50%;
-   /* outline: 1px solid cornflowerblue; */
+   transition: transform var(--anim-slow);
+}
+
+.price-list-item:first-child {
+   transform-origin: left center;
+   transform: rotateY(15de);
+   background-image: linear-gradient(180deg, #171A24 0%, rgba(23, 26, 36, 0.2) 100%);
+}
+
+.price-list-item:last-child {
+   transform: rotateY(-15deg);
+   transform-origin: right center;
+   background-image:linear-gradient(180deg, #090B13 0%, rgba(9, 11, 19, 0.2) 100%);
+}
+
+.price-list-item:hover {
+   transform: rotateY(0);
 }
 
 .price-inner-item:not(:last-child) {
@@ -519,6 +538,7 @@ img {
    margin-left: auto;
    margin-right: auto;
 }
+
 /* Benefits section */
 .benefits-amount {
    font-weight: 700;
@@ -553,16 +573,13 @@ img {
    margin-bottom: 44px;
 }
 
-.team-item {
-   /* outline: 1px solid blueviolet; */
-}
-
 .team-wrapper {
    padding: 30px 0;
 }
 
 .team-subtitle {
    margin-bottom: 8px;
+
    font-size: 18px;
    line-height: 1.38;
    text-align: center;
@@ -572,6 +589,7 @@ img {
 
 .team-position {
    margin-bottom: 30px;
+
    font-size: 14px;
    line-height: 1.36;
    text-align: center;
@@ -675,11 +693,23 @@ img {
 }
 
 .contacts-address {
+   margin-bottom: 70px;
+
    font-style: normal;
    font-size: 18px;
    line-height: 1.67;
    letter-spacing: 0.02em;
    color: #9da4bd;
+}
+
+.contacts-item:not(:last-child) {
+   margin-bottom: 20px;
+}
+
+.contacts-link {
+   width: 270px;
+   display: flex;
+   gap: 16px;
 }
 
 .contacts-scedule {
@@ -698,6 +728,24 @@ img {
    color: #9da4bd;
 }
 
+/**
+	|============================
+	| Робота з декількома кольорами
+	| на одній іконці
+	|============================
+*/
+.icon-astronaut {
+   --color1: #303030;
+   --color2: #ff6c00;
+   --color3: #ff0000;
+}
+
+.icon-astronaut:hover {
+   --color1: #db3fa9;
+   --color2: #00aeff;
+   --color3: #44ff00;
+}
+
 /* Modal window*/
 
 .backdrop {
@@ -709,6 +757,7 @@ img {
    height: 100%;
 
    background-color: rgba(55, 57, 63, 0.203);
+
    opacity: 1;
    visibility: visible;
    pointer-events: initial;
@@ -734,8 +783,6 @@ img {
 
    border-radius: 10px;
    box-shadow: 4px 4px 8px rgba(55, 57, 63, 0.203);
-
-
 }
 
 .modal-close-btn {
@@ -756,7 +803,7 @@ img {
    border: none;
    border-radius: 50%;
    background-color: #FFFFFF;
-   cursor: pointer;
    box-shadow: 4px 4px 8px rgba(55, 57, 63, 0.203);
+   cursor: pointer;
 }
 
