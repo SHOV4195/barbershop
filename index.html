@@ -509,11 +509,30 @@
       </section>
       <!--Contacts-->
       <section class="contacts section">
-        <div class="container">
-          <div>
+        <div class="container contacts-container">
+          <div class="contacts-left-side">
             <h2 class="section-title section-title-mode-dark">Онлайн-запись</h2>
-            <form action=""></form>
-            <button class="btn btn-mode-dark" type="button">отправить</button>
+            <form name="register-form" autocomplete="on" novalidate>
+              <label>
+                <span>Имя*</span>
+                <input type="text" name="user-name" placeholder="Antony Black" />
+              </label>
+              <label>
+                <span>Телефон*</span>
+                <input type="phone" name="user-phone" placeholder="+38(099)-111-22-33" />
+              </label>
+
+              <label for="text">
+                <span>сообщение</span>
+                <textarea
+                  name="user-massage"
+                  cols="30"
+                  rows="10"
+                  placeholder="Enter your message"
+                ></textarea>
+              </label>
+              <button class="btn btn-mode-dark" type="submit">отправить</button>
+            </form>
           </div>
           <div>
             <h2 class="section-title section-title-mode-dark">Контакты</h2>
@@ -574,6 +593,36 @@
             <use href="./images/icons.svg#icon-close"></use>
           </svg>
         </button>
+        <form class="sign-up-form">
+          <label>
+            <span>Email*</span>
+            <input type="email" name="user-email" placeholder="example@mail.com" />
+          </label>
+          <label>
+            <span>Password*</span>
+            <input type="password" name="user-pass" placeholder="0-9%^&*-ASD" />
+          </label>
+          <div class="form-radio">
+            <p>Chose your haircut</p>
+            <label>
+              <span>Canadian cut</span>
+              <input type="radio" checked name="user-haircut" value="canadian" />
+            </label>
+            <label>
+              <span>Crew cut</span>
+              <input type="radio" name="user-haircut" value="crew" />
+            </label>
+            <label>
+              <span>Buzz cut</span>
+              <input type="radio" name="user-haircut" value="buzz" />
+            </label>
+
+            <label class="form-checkbox">
+              <input type="checkbox" name="user-agreement" />
+              <span>I argree</span>
+            </label>
+          </div>
+        </form>
       </div>
     </div>
     <script src="./js/header-scroll.js"></script>

@@ -795,7 +795,6 @@ img {
    display: flex;
    align-items: center;
    justify-content: center;
-
    width: 30px;
    height: 30px;
    padding: 0;
@@ -807,3 +806,20 @@ img {
    cursor: pointer;
 }
 
+.sign-up-form {
+   padding: 30px;
+   display: flex;
+   flex-direction: column;
+
+
+}
+
+.sign-up-form label {
+   color: lightblue;
+   margin-bottom: 20px;
+} 
+
+.form-radio {
+   display: flex;
+   flex-direction: column;
+}
