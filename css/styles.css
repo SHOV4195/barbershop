@@ -7,6 +7,7 @@
    --accent-txt-cl: #ff6c00;
    --main-light-theme: #303030;
    --main-dark-theme: #ffffff;
+   --red-cl: #f9002f;
 
    /* bg-colors */
 
@@ -971,10 +972,36 @@ svg:hover {
 
 
 
-.contact-form-error,
-.contact-form-error-icon {
+.contact-form-error {
    position: absolute;
    left: 0;
    bottom: -150%;
+   /* opacity: 0; */
+}
+
+.contact-form-error-icon {
+   position: absolute;
+   right: 5px;
+   top: 50%;
+   /* opacity: 0; */
+
+   transform: translateY(-50%);
+}
+
+.icon-attention {
+   fill: #f1b211;
    opacity: 0;
+}
+
+.icon-success {
+   fill: #90ee90;
+
+}
+
+.contact-form-field:focus:valid {
+   opacity: 1;
+}
+
+.contact-form-field:focus:invalid {
+   opacity: 1;
 }
