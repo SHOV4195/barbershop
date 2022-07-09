@@ -611,35 +611,39 @@
             <form name="contact-form" autocomplete="on" novalidate>
               <!-- <label for="user-name">Имя*</label>
 							<input type="text" id="user-name" /> -->
-              <label class="contact-form-group">
-                <input
-                  class="contact-form-field"
-                  type="text"
-                  name="user-name"
-                  placeholder="Antony Black"
-                  minlength="2"
-                />
-                <span class="contact-form-label">Имя*</span>
-                <span class="contact-form-error">Минимальния длинна 2 символа</span>
-                <svg class="contact-form-error-icon" width="20" height="20">
-                  <use href="./images/icons.svg#icon-attention"></use>
-                  <use href="./images/icons.svg#icon-success"></use>
-                </svg>
-              </label>
-              <label class="contact-form-group">
-                <input
-                  class="contact-form-field"
-                  type="phone"
-                  name="user-phone"
-                  placeholder="+38 (099) 123-45-67"
-                />
-                <span class="contact-form-label">Телефон*</span>
-                <span class="contact-form-error">Введите телефон в указанном формате</span>
-                <svg class="contact-form-error-icon" width="20" height="20">
-                  <use href="./images/icons.svg#icon-attention"></use>
-                  <use href="./images/icons.svg#icon-success"></use>
-                </svg>
-              </label>
+              <div class="contact-form-wrapper">
+                <label class="contact-form-group">
+                  <input
+                    class="contact-form-field"
+                    type="text"
+                    name="user-name"
+                    placeholder="Antony Black"
+                    minlength="2"
+                    required
+                  />
+                  <span class="contact-form-label">Имя*</span>
+                  <span class="contact-form-error">Минимальния длинна 2 символа</span>
+                  <svg class="contact-form-error-icon" width="20" height="20">
+                    <use href="./images/icons.svg#icon-attention"></use>
+                    <use href="./images/icons.svg#icon-success"></use>
+                  </svg>
+                </label>
+                <label class="contact-form-group">
+                  <input
+                    class="contact-form-field"
+                    type="phone"
+                    name="user-phone"
+                    placeholder="+38 (099) 123-45-67"
+                    required
+                  />
+                  <span class="contact-form-label">Телефон*</span>
+                  <span class="contact-form-error">Введите телефон в указанном формате</span>
+                  <svg class="contact-form-error-icon" width="20" height="20">
+                    <use href="./images/icons.svg#icon-attention"></use>
+                    <use href="./images/icons.svg#icon-success"></use>
+                  </svg>
+                </label>
+              </div>
               <label class="contact-form-group">
                 <textarea
                   class="contact-form-message"
@@ -777,13 +781,13 @@
           <div class="" role="group" aria-labelledby="payment-method">
             <p class="" id="payment-method">Виберите способ оплаты</p>
             <label>
-              <input type="radio" name="user-payment" value="visa" checked />
+              <input type="radio" name="user-payment" value="visa" checked required />
               <svg width="36" height="32">
                 <use href="./images/icons.svg#icon-visa"></use>
               </svg>
             </label>
             <label>
-              <input type="radio" name="user-payment" value="mastercard" />
+              <input type="radio" name="user-payment" value="mastercard" required />
               <svg width="36" height="32">
                 <use href="./images/icons.svg#icon-mastercard"></use>
               </svg>
