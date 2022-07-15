@@ -50,11 +50,11 @@
 
   <body data-body>
     <!-- Секція хедер -->
-    <header class="page-header" data-header>
-      <div class="container header-container">
-        <a class="header-logo" href="./index.html">
+    <header class="header" data-header>
+      <div class="container header__container">
+        <a class="header__logo logo" href="./index.html">
           <img
-            class="header-img"
+            class="logo__img"
             src="./images/header/Logo.jpeg"
             alt="Логотип BarberShop"
             width="69"
@@ -62,26 +62,26 @@
           />
         </a>
 
-        <nav class="header-nav">
-          <ul class="header-list list">
-            <li class="header-list-item">
-              <a class="header-link link current-link" href="">Главная </a>
+        <nav class="nav">
+          <ul class="nav__list list">
+            <li class="nav__item">
+              <a class="nav__link nav__link--current link" href="">Главная </a>
             </li>
-            <li class="header-list-item">
-              <a class="header-link link" href="">Услуги и цены</a>
+            <li class="nav__item">
+              <a class="nav__link link" href="">Услуги и цены</a>
             </li>
-            <li class="header-list-item">
-              <a class="header-link link" href="">Мастера</a>
+            <li class="nav__item">
+              <a class="nav__link link" href="">Мастера</a>
             </li>
-            <li class="header-list-item">
-              <a class="header-link link" href="./contatcs.html">Контакты</a>
+            <li class="nav__item">
+              <a class="nav__link link" href="./contatcs.html">Контакты</a>
             </li>
           </ul>
         </nav>
-        <div class="header-group">
-          <a class="header-contact link" href="tel:+380441111111">+38 044 111 11 11</a>
+        <div class="header__group">
+          <a class="header__contact link" href="tel:+380441111111">+38 044 111 11 11</a>
           <button
-            class="header-btn btn btn--mode-dark animate__animated animate__bounce"
+            class="header__btn btn btn--mode-dark animate__animated animate__bounce"
             type="button"
             data-modal-open
           >
@@ -157,7 +157,7 @@
           </ul>
           <div class="about-group">
             <p class="uppertitle uppertitle--mode-light">О НАС</p>
-            <h2 class="section-title section-title--mode-light">Лучший Барбершоп твоего города</h2>
+            <h2 class="title title--mode-light">Лучший Барбершоп твоего города</h2>
             <p class="section-subtitle section-subtitle-mode-light">
               Если ты хочешь добавить в свой образ больше уверенности – тебе точно к нам.
             </p>
@@ -176,7 +176,7 @@
       <section class="price section">
         <div class="container">
           <p class="uppertitle uppertitle--mode-dark">Проведи время в компании лучших мастеров</p>
-          <h2 class="section-title section-title--mode-dark price-title">Услуги и цены</h2>
+          <h2 class="title title--mode-dark price-title">Услуги и цены</h2>
           <ul class="price-list list">
             <li class="price-list-item">
               <ul class="price-inner-list list">
@@ -248,7 +248,7 @@
           </div>
           <div class="benefits-right-side">
             <p class="uppertitle uppertitle--mode-light">старая традиционная школа</p>
-            <h2 class="section-title section-title--mode-light">Почему приходят именно к нам?</h2>
+            <h2 class="title title--mode-light">Почему приходят именно к нам?</h2>
             <p class="section-subtitle section-subtitle-mode-light">
               О нас говорят только хорошее. Но лучше 1 раз увидеть и прочувствовать, чем 10 раз
               прочитать.
@@ -261,7 +261,7 @@
       <section class="team section">
         <div class="container">
           <p class="uppertitle uppertitle--mode-light">для настоящих ценителей атмосферы</p>
-          <h2 class="team__title section-title section-title--mode-light">Наши мастера</h2>
+          <h2 class="team__title title title--mode-light">Наши мастера</h2>
 
           <ul class="team__list card-set list">
             <li class="team__item card-set__item">
@@ -545,7 +545,7 @@
       <section class="contacts section">
         <div class="container contacts-container">
           <div class="contacts-left-side">
-            <h2 class="section-title section-title-mode-dark">Онлайн-запись</h2>
+            <h2 class="title title-mode-dark">Онлайн-запись</h2>
             <form name="contact-form" autocomplete="on" novalidate>
               <!-- <label for="user-name">Имя*</label>
 							<input type="text" id="user-name" /> -->
@@ -605,7 +605,7 @@
             </form>
           </div>
           <div class="contacts-right-side">
-            <h2 class="section-title section-title-mode-dark">Контакты</h2>
+            <h2 class="title title-mode-dark">Контакты</h2>
             <address class="contacts-address">
               <ul class="contacts-list list">
                 <li class="contacts-item">
