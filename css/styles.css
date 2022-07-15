@@ -94,11 +94,11 @@ img {
    color: var(--main-dark-theme);
 }
 
-.btn-mode-light {
+.btn--mode-light {
    color: var(--main-light-theme);
 }
 
-.btn-mode-dark {
+.btn--mode-dark {
    color: var(--main-dark-theme);
 }
 
@@ -134,11 +134,11 @@ img {
    text-transform: uppercase;
 }
 
-.uppertitle-mode-light {
+.uppertitle--mode-light {
    color: #303030;
 }
 
-.uppertitle-mode-dark {
+.uppertitle--mode-dark {
    color: rgba(157, 164, 189, 0.6);
 }
 
@@ -170,12 +170,12 @@ img {
    letter-spacing: 0.05em;
 }
 
-.section-title-mode-light {
+.section-title--mode-light {
    margin-bottom: 20px;
    color: #303030;
 }
 
-.section-title-mode-dark {
+.section-title--mode-dark {
    margin-bottom: 44px;
    color: #ffffff;
 }
@@ -219,12 +219,11 @@ img {
 .card-set {
    display: flex;
    flex-wrap: wrap;
-   margin: calc(-1 * var(--indent) / 2);
+   gap: var(--indent);
 }
 
-.card-set-item {
+.card-set__item {
    flex-basis: calc((100% - var(--indent) * var(--items)) / var(--items));
-   margin: calc(var(--indent) / 2);
 }
 
 /* common styles end */
@@ -639,15 +638,15 @@ img {
    background-color: #f7f7f7;
 }
 
-.team-title {
+.team__title {
    margin-bottom: 44px;
 }
 
-.team-wrapper {
+.team__wrapper {
    padding: 30px 0;
 }
 
-.team-subtitle {
+.team__subtitle {
    margin-bottom: 8px;
 
    font-size: 18px;
@@ -657,7 +656,7 @@ img {
    color: #303030;
 }
 
-.team-position {
+.team__position {
    margin-bottom: 30px;
 
    font-size: 14px;
@@ -667,25 +666,7 @@ img {
    color: #ff6c00;
 }
 
-/* .social-media-link {
-	display: inline-block;
-	width: 44px;
-	height: 44px;
-	background-image: url(../images/icons/instagram.svg);
-	background-repeat: no-repeat;
-	background-position: center;
-}
-.social-media-link:hover {
-	background-image: url(../images/icons/instagram-1.svg);
-} */
-
-/* svg {
-	fill: #ff6c00;
-}
-svg:hover {
-	fill: #bf00ff;
-} */
-/**
+/*
 	|============================
 	| Оформлення іконок
 	|============================
@@ -695,11 +676,11 @@ svg:hover {
    justify-content: center;
 }
 
-.social-media-item:not(:last-child) {
+.social-media__item:not(:last-child) {
    margin-right: 10px;
 }
 
-.social-media-link {
+.social-media__link {
    display: flex;
    align-items: center;
    justify-content: center;
@@ -710,37 +691,31 @@ svg:hover {
    border-radius: 50%;
 
    transition: color var(--anim-fast), background-color var(--anim-fast);
-
-   /* outline: 1px solid red; */
 }
 
-/* Встановлюємо fill на іконку при ховері на посилання */
-/* .social-media-link:hover .social-media-icon,
-.social-media-link:focus .social-media-icon {
-	fill: #ff6c00;
-} */
 
-.social-media-link:hover,
-.social-media-link:focus {
+.social-media__link:hover,
+.social-media__link:focus {
    color: #ff6c00;
    background-color: #555555;
 }
 
-.social-media-icon {
+.social-media__icon {
    fill: currentColor;
 }
 
 /* Portfolio section */
-.portfolio-list {
+.portfolio__list {
    --items: 4;
 }
 
-.portfolio-item {
+.portfolio__item {
    position: relative;
    overflow: hidden;
 }
 
-.portfolio-overlay {
+/* Overlay */
+.overlay {
    position: absolute;
    top: 0;
    left: 0;
@@ -759,11 +734,11 @@ svg:hover {
    transition: transform var(--anim-fast);
 }
 
-.portfolio-item:hover .portfolio-overlay {
+.portfolio__item:hover .overlay {
    transform: translateY(0);
 }
 
-.portfolio-desc {
+.overlay__desc {
    font-size: 18px;
    color: white;
 }
